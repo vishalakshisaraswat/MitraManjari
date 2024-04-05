@@ -1,7 +1,6 @@
-Title - MitraManjari
-Authors - Unnati, Vishalakshi & Yashasvi
 
-**Project Title:** **MitraManjari (मित्रमंजरी)**
+**Project Title -** **MitraManjari (मित्रमंजरी)**
+Authors - **Unnati, Vishalakshi & Yashasvi**
 
 
 _MitraManjari (मित्रमंजरी)_ is a small C++ application which is designed to help individuals track their menstrual cycles, receive reminders for upcoming periods, record symptoms experienced during periods, and engage in fun activities to promote wellness and relaxation.
