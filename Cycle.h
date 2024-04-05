@@ -57,12 +57,14 @@ namespace MenstrualCycle {
     		}
 	
 	};
-}
+
 int main()
 {
 	Cycle m;
 	m.readDates();
 	string next = m.calculateNextPeriodDate();
 	m.display();
-	cout<<endl<<"Expected data: "<<next;  //prints next date
+	cout<<endl<<"Next expected data: "<<next;  //prints next date
+	return 0;
+}
 }
