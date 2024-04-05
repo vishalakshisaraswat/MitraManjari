@@ -1,8 +1,11 @@
+#include<ios>
 #include <iostream>
+#include<iomanip>
 #include <fstream>
 #include <windows.h>
 #include <sstream>
 using namespace std;
+
 namespace login{
 
 class Login{
@@ -28,7 +31,7 @@ class Login{
 		}
 };
 
-	registration(Login log){
+	void registration(Login log){
 		system("cls");
 		string id, pw;
 		cout<<"\tEnter Login ID: ";
@@ -57,7 +60,7 @@ class Login{
 		Sleep(3000);
 		}
 
-		login(){
+	void login(){
 		system("cls");
 		string id, pw;
 		cout<<"\tEnter Login ID: ";
@@ -89,8 +92,8 @@ class Login{
 		Sleep(800);
 		}
 		system("cls");
-		cout<<"\tWelcome To This Page!"<<endl;
-		}
+		cout<<"\tWelcome To MitraManjari!"<<endl;
+		Sleep(1500);
 		}
 		if(!found){
 		cout<<"\tError: Incorrect Login ID Or Password!"<<endl;
@@ -99,6 +102,7 @@ class Login{
 		infile.close();
 		Sleep(5000);
 		}
+	}
 
 		int main(){
 		Login log;
@@ -107,8 +111,9 @@ class Login{
 		while(!exit){
 		system("cls");
 		int val;
-		cout<<"\tWelcome To Registration & Login Form"<<endl;
+		cout<<"\tWelcome To MitraManjari"<<endl;
 		cout<<"\t************************************"<<endl;
+		cout<<"\t***A friendly service for women***"<<endl;
 		cout<<"\t1.Register."<<endl;
 		cout<<"\t2.Login."<<endl;
 		cout<<"\t3.Exit."<<endl;
@@ -121,6 +126,7 @@ class Login{
 		
 		else if(val==2){
 		login();
+		return 0;
 		}
 
 		else if(val==3){
@@ -131,5 +137,6 @@ class Login{
 		}
 		Sleep(3000);
 		}
+		return 0;
 	}
 }
