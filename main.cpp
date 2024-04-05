@@ -6,10 +6,10 @@ using namespace std;
 #include"login.h"
 using namespace login;
 
-#include"cycle.h"
+#include"ccyclee.h"
 using namespace MenstrualCycle;
 
-#include"timer.h"
+#include"ttimerr.h"
 using namespace cycletracker;
 
 #include"game1.h"
@@ -17,15 +17,14 @@ using namespace game1;
 
 int main(){
 	bool exit=false;
-	//enter software
-	login::Login L;
-	login::main();
+//	enter software
+//	login::Login L;
+//	login::main();
 	//authentication done!
 	
-		Timer T(28,4);
 	do{
 		
-		cout<<"\t*************"<<endl;
+		cout<<"\n\n\t*************"<<endl;
 		cout<<"\t1.New user? \n\t\tUpdate cycle details"<<endl;
 		cout<<"\t2. Tired?\n\t\tPlay game"<<endl;
 		cout<<"\t3. Forgot date?\n\t\tCheck cycle status"<<endl;
@@ -41,7 +40,7 @@ int main(){
 				game1::main();
 				break;
 			case 3:
-				T.startCountdown();
+				cycletracker::main();
 				break;
 			case 4:
 				system("cls");
