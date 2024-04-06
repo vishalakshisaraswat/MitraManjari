@@ -10,12 +10,12 @@ namespace cycletracker {
     private:
         int countdownStart;
         int countdownEnd;
-        std::string ans;
+        string ans;
 
     public:
         Timer() {}
 
-        void setCountdownStart(const std::string& expectedDate) {
+        void setCountdownStart(const string& expectedDate) {
             // Get current date
             time_t currentTime = time(nullptr);
             tm* currentTm = localtime(&currentTime);
@@ -47,41 +47,41 @@ namespace cycletracker {
 				int k=0;
                 do {
                     system("cls");
-                    std::cout << "-------------------------------------" << std::endl;
-                    std::cout << " | Your period may start tomorrow... |" << std::endl;
-                    std::cout << "-------------------------------------" << std::endl;
-                    std::cout << "Did your period start? (yes/no): ";
-                    std::cin >> ans;
+                    cout << "-------------------------------------" <<endl;
+                    cout << " | Your period may start tomorrow... |" <<endl;
+                    cout << "-------------------------------------" << endl;
+                    cout << "Did your period start? (yes/no): ";
+                    cin >> ans;
                     k++;
                 } while (ans != "yes" && ans == "no");
 				
                 if (ans == "yes") {
                     for (int i = 5; i >= 0; i--) {
                         system("cls");
-                        cout << "-------------------------------------" << std::endl;
-                        cout << "|               " << i << "                  |" << std::endl;
-                        cout << "| more days of your period...      |" << std::endl;
-                        cout << "-------------------------------------" << std::endl;
+                        cout << "-------------------------------------" <<endl;
+                        cout << "|               " << i << "                  |" <<endl;
+                        cout << "| more days of your period...      |" <<endl;
+                        cout << "-------------------------------------" <<endl;
 
                         Sleep(1500);
                     }
                 }
                 cout<<"Your periods were delayed by: "<<k<<" days";
-                cout << "\n\tKnow more... 1" << std::endl;
-                cout << "\tExit 0" << std::endl;
+                cout << "\n\tKnow more... 1" <<endl;
+                cout << "\tExit 0" <<endl;
                 cin >> f;
             } while (f);
         }
     };
 
-    std::string readExpectedDateFromFile() {
-        std::ifstream file("D:/cycle.txt");
-        std::string line;
+    string readExpectedDateFromFile() {
+        ifstream file("D:/cycle.txt");
+        string line;
         if (file.is_open()) {
             // Read the first line containing the expected date
-            if (std::getline(file, line)) {
+            if (getline(file, line)) {
                 size_t pos = line.find(":");
-                if (pos != std::string::npos && pos + 1 < line.length()) {
+                if (pos != string::npos && pos + 1 < line.length()) {
                     return line.substr(pos + 2); // Extract the expected date
                 }
             }
@@ -92,7 +92,7 @@ namespace cycletracker {
 
     int main() {
         Timer t;
-        std::string expectedDate = readExpectedDateFromFile();
+        string expectedDate = readExpectedDateFromFile();
         t.setCountdownStart(expectedDate);
         t.startCountdown();
         return 0;
