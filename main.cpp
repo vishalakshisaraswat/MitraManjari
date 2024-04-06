@@ -18,8 +18,8 @@ using namespace game1;
 int main(){
 	bool exit=false;
 //	enter software
-//	login::Login L;
-//	login::main();
+	login::Login L;
+	login::main();
 	//authentication done!
 	
 	do{
