@@ -1,7 +1,8 @@
 #include <iostream>
-#include <string>
+#include<iomanip>
 #include <windows.h>
 #include <fstream>
+#include <string>
 #include <ctime>
 using namespace std;
 namespace cycletracker {
@@ -37,32 +38,43 @@ namespace cycletracker {
             int f;
             do {
                 for (int i = countdownStart; i >= 0; i--) {
-                    system("cls");
-                    cout << " --------------------------------------" << endl;
-                    cout << " |                 " << i << "                  |" << endl;
-                    cout << " | more days until your next period...|" << endl;
-                    cout << " --------------------------------------" << endl;
-                    Sleep(1500);
+                	system("cls");
+			cout << setfill('-') << setw(38) << "-" << endl;
+    			cout << " |" << setw(17) << setfill(' ') << i << setw(20) << "|" << endl;
+    			cout << " | more days until your next period...|" << endl;
+    			cout << setfill('-') << setw(38) << "-" << endl;
+                    // cout << " --------------------------------------" << endl;
+                    // cout << " |                 " << i << "                  |" << endl;
+                    // cout << " | more days until your next period...|" << endl;
+                    // cout << " --------------------------------------" << endl;
+                   	 Sleep(1500);
                 }
-				int k=0;
+		int k=0;
                 do {
                     system("cls");
-                    cout << "-------------------------------------" <<endl;
-                    cout << " | Your period may start tomorrow... |" <<endl;
-                    cout << "-------------------------------------" << endl;
-                    cout << "Did your period start? (yes/no): ";
-                    cin >> ans;
-                    k++;
-                } while (ans != "yes" && ans == "no");
+                    // cout << "-------------------------------------" <<endl;
+                    // cout << " | Your period may start tomorrow... |" <<endl;
+                    // cout << "-------------------------------------" << endl;
+			cout << setfill('-') << setw(37) << "-" << endl;
+    			cout << " |" << setw(35) << "Your period may start tomorrow... |" << endl;
+    			cout << setfill('-') << setw(37) << "-" << endl;
+                	cout << "Did your period start? (yes/no): ";
+                    	cin >> ans;
+                    	k++;
+                } 
+		while (ans != "yes" && ans == "no");
 				
                 if (ans == "yes") {
                     for (int i = 5; i >= 0; i--) {
-                        system("cls");
-                        cout << "-------------------------------------" <<endl;
-                        cout << "|               " << i << "                  |" <<endl;
-                        cout << "| more days of your period...      |" <<endl;
-                        cout << "-------------------------------------" <<endl;
-
+                	system("cls");
+                        cout << setfill('-') << setw(38) << "-" << endl;
+    			cout << " |" << setw(17) << setfill(' ') << i << setw(20) << "|" << endl;
+    			cout << " | more days until your next period...|" << endl;
+   			cout << setfill('-') << setw(38) << "-" << endl;
+                        // cout << "-------------------------------------" <<endl;
+                        // cout << "|               " << i << "                  |" <<endl;
+                        // cout << "| more days of your period...      |" <<endl;
+                        // cout << "-------------------------------------" <<endl;
                         Sleep(1500);
                     }
                 }
