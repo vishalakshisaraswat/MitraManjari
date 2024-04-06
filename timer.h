@@ -56,7 +56,7 @@ namespace cycletracker {
                     // cout << " | Your period may start tomorrow... |" <<endl;
                     // cout << "-------------------------------------" << endl;
 			cout << setfill('-') << setw(37) << "-" << endl;
-    			cout << " |" << setw(35) << "Your period may start tomorrow... |" << endl;
+    			cout << " |" << setw(35) << "Your period may start today... |" << endl;
     			cout << setfill('-') << setw(37) << "-" << endl;
                 	cout << "Did your period start? (yes/no): ";
                     	cin >> ans;
