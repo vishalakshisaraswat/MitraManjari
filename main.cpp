@@ -6,10 +6,10 @@ using namespace std;
 #include"login.h"
 using namespace login;
 
-#include"ccyclee.h"
+#include"cycle.h"
 using namespace MenstrualCycle;
 
-#include"ttimerr.h"
+#include"timer.h"
 using namespace cycletracker;
 
 #include"game1.h"
